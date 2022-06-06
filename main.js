@@ -1,19 +1,18 @@
-function counter(){
-    let first = 0
-    let second = 1
-    let sum = 0 
-    let output = []
+
+function counter() {
+    let first = 0;
+    let second = 1;
+    let sum = 0;
+    let output = [first, second];
     
-    for(let i=0; i<10;i++){
-        output.push(first)
-        output.push(second)
-        sum = first + second
-        first = second
-        second = sum
-        return second
+  
+    for (let i = 0; i < 8; i++) {
+      sum = first + second;
+      first = second;
+      second = sum;
+      output.push(second);
     }
-    console.log(output)
-
-}
-
-counter()
+    console.log(output);
+  }
+  
+  counter();
